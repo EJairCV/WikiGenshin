@@ -1,0 +1,15 @@
+
+  <div class="card text-white bg-dark mx-3 my-2" *ngIf="filtrar()"   style="width: 10rem; height: 400px;">
+    <img src="{{urlFoto}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{personaje.name}}</h5>
+      <h6>Vision: {{personaje.vision}}</h6>
+      <h6>Nación: {{personaje.nation}}</h6>
+      <h6>Raresa: {{personaje.rarity}}✰</h6>
+      <h6>{{personajeArma}}</h6>
+      
+      <!-- <p class="card-text">{{personaje.vision}}</p> -->
+      <a [routerLink]="['/','detalle-personaje',personajeNombre]" class="btn btn-primary">Ver mas</a>
+    </div>
+  </div>
+

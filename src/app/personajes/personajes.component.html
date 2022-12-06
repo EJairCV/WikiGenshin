@@ -1,0 +1,52 @@
+<app-navbar></app-navbar>
+<div class="row mx-3 my-4">
+    <div class="col">Elemento</div>
+</div>
+<div class="row mx-3">
+    <div class="col">
+        <button type="button " class="btn" (click)="filtrarElemento('Pyro')">Pyro</button>
+    </div>
+    <div class="col">
+        <button type="button" class="btn" (click)="filtrarElemento('Cryo')">Cryo</button>
+    </div>
+    <div class="col">
+        <button type="button" class="btn" (click)="filtrarElemento('Geo')" >Geo</button>
+    </div>
+    <div class="col">
+        <button type="button"  class="btn" (click)="filtrarElemento('Anemo')">Anemo</button>
+    </div>
+    <div class="col">
+        <button type="button" class="btn" (click)="filtrarElemento('Hydro')" >Hydro</button>
+    </div>
+    <div class="col">
+        <button type="button" class="btn" (click)="filtrarElemento('Electro')" >Electro</button>
+    </div>
+    <div class="col">
+        <button type="button" class="btn" (click)="filtrarElemento('')" >Todos</button>
+    </div>
+</div>
+<div class="row mx-3 my-4">
+    <div class="col">Arma</div>
+</div>
+<div class="row mx-3">
+    <div class="col">
+        <button type="button" class="btn" (click)="filtrarArma('Sword')">Espada</button>
+    </div>
+    <div class="col">
+        <button type="button" class="btn" (click)="filtrarArma('Claymore')">Mandoble</button>
+    </div>
+    <div class="col">
+        <button type="button" class="btn" (click)="filtrarArma('Polearm')" >Lanza</button>
+    </div>
+    <div class="col">
+        <button type="button"  class="btn" (click)="filtrarArma('Catalyst')">Catalizador</button>
+    </div>
+    <div class="col">
+        <button type="button" class="btn" (click)="filtrarArma('Bow')" >Arco</button>
+    </div>
+    
+</div>
+<div class="my-4 d-flex justify-content-center flex-wrap">
+    <app-personaje-hijo *ngFor="let personaje of personajes" [personajeNombre]="personaje" [personajeElemento]="elemento" [personajeArma]="arma"></app-personaje-hijo> 
+</div>
+
